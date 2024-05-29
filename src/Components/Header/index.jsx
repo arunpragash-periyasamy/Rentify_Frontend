@@ -1,13 +1,12 @@
 
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import { Button, Layout } from "antd";
-const { Header } = Layout;
-const Head = ({Collapsed, collapsed}) => {
+const Header = ({Collapsed, collapsed}) => {
+  const { Header } = Layout;
     return (
       <Header
         style={{
                 padding: 0,
-            backgroundColor:"#ffffff"
         }}
       >
         <Button
@@ -24,4 +23,4 @@ const Head = ({Collapsed, collapsed}) => {
     );
 }
 
-export default Head;
+export default Header;

@@ -1,10 +1,11 @@
 import { Layout } from "antd";
-const { Footer } = Layout;
-const Foot = () => {
+const Footer = () => {
+  const { Footer } = Layout;
     return (
       <Footer
         style={{
           textAlign: "center",
+          backgroundColor: "#1f1f1f",
         }}
       >
         Rentify ©{new Date().getFullYear()} by Arunpragash A P
@@ -12,4 +13,4 @@ const Foot = () => {
     );
 }
 
-export default Foot;
+export default Footer;

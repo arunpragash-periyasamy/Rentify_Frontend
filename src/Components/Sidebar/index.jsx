@@ -29,12 +29,12 @@ const Sidebar = ({collapsed}) => {
             {
               key: "2",
               icon: <VideoCameraOutlined/>,
-              label: "nav 2",
+              label: <Link to="/page">Test</Link>,
             },
             {
               key: "3",
               icon: <UploadOutlined/>,
-              label: "nav 3",
+              label: <Link to="/table">Table</Link>,
             },
             {
               key: "4",

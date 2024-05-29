@@ -4,6 +4,7 @@ import Sidebar from "../../Components/Sidebar";
 import Header from "../../Components/Header";
 import Content from "../../Components/Content";
 import Footer from "../../Components/Footer";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
   
@@ -18,7 +19,7 @@ const App = () => {
         }}
       >
         <Header Collapsed={()=> setCollapsed(!collapsed)}/>
-        <Content />
+        <Content Outlet={Outlet}/>
         <Footer/>
       </Layout>
     </Layout>

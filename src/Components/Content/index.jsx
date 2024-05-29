@@ -1,23 +1,26 @@
+
 import { Layout } from "antd"
-const { Content } = Layout;
-const Body = () => {
+const Content = ({Outlet}) => {
+  const { Content } = Layout;
     return(
         <Content
           style={{
             margin: "24px 16px 0",
-            overflow: "initial",
+          overflow: "initial",
+            minHeight:"86vh"
           }}
         >
           <div
             style={{
               padding: 24,
               textAlign: "center",
-              background: "#ffffff",
               borderRadius: 8,
             }}
-          ></div>
+        >
+          <Outlet/>
+        </div>
         </Content>
     )
 }
 
-export default Body;
+export default Content;
