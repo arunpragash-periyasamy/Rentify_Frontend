@@ -12,14 +12,23 @@ const PropertyAddress = ({form}) => {
           >
             <Input placeholder="Property Title" onInput={titleCase} />
           </Form.Item>
+          <Form.Item
+            label="Door No"
+            name="doorNo"
+            rules={[
+              {
+                required: true,
+                message: `Please enter the door no`,
+              },
+            ]}
+          >
+            <Input placeholder="Door Number" />
+          </Form.Item>
           <Form.Item label="Street" name="street" rules={[required]}>
             <Input placeholder="Street" />
           </Form.Item>
           <Form.Item label="Address" name="address" rules={[required]}>
             <Input placeholder="Address" />
-          </Form.Item>
-          <Form.Item label="City" name="City" rules={[required]}>
-            <Input placeholder="City" />
           </Form.Item>
           <Form.Item
             label="Pin Code"
@@ -36,6 +45,15 @@ const PropertyAddress = ({form}) => {
               maxLength={6}
               onInput={handleNumericInput}
             />
+          </Form.Item>
+          <Form.Item label="City" name="city" rules={[required]}>
+            <Input placeholder="City" />
+          </Form.Item>
+          <Form.Item label="State" name="state" rules={[required]}>
+            <Input placeholder="State" />
+          </Form.Item>
+          <Form.Item label="Landmark" name="landmark" rules={[required]}>
+            <Input placeholder="Landmark" />
           </Form.Item>
         </Col>
       </Row>

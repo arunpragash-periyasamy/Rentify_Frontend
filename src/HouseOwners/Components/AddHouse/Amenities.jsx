@@ -8,15 +8,23 @@ import { Button, Col, Form, Input, Row, Select, Space } from "antd";
     },
     {
       label: "Washing Machine",
-      value: "washing machine",
+      value: "washingMachine",
     },
     {
       label: "AC",
-      value: "AC",
+      value: "ac",
     },
     {
       label: "TV",
-      value: "TV",
+      value: "tv",
+    },
+    {
+      label: "Parking",
+      value: "parking",
+    },
+    {
+      label: "Lift",
+      value: "lift",
     },
   ];
 

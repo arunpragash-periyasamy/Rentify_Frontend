@@ -11,6 +11,6 @@ export const titleCase = (event) => {
 }
 
 export const required = {
-    required: true,
+    required: false,
     message: "This field is required",
   }

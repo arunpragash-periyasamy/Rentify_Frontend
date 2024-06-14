@@ -1,7 +1,7 @@
 import { Button, Form, Row, Col } from "antd";
 import AddHouseTabs from "./FormTabs";
 import PropertyInformation from "./PropertyAddress";
-
+import axios from "axios";
 const AddHouse = () => {
   const [form] = Form.useForm();
 
@@ -20,11 +20,34 @@ const AddHouse = () => {
             offset: 8,
           },
         }
-  
-  const onFinish = (values) => {
-    alert("Success");
-    console.log(values);
-  }
+  const onFinish = async (values) => {
+    const formData = new FormData();
+
+    // Append other form data fields
+    Object.keys(values).forEach((key) => {
+      formData.append(key, values[key]);
+    });
+
+    // Append file(s)
+    if (values.images && values.images.length > 0) {
+      values.images.forEach((image) => {
+        formData.append("images", image.originFileObj);
+      });
+    }
+
+    try {
+      await axios.post("http://localhost:3000/api/house", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      alert("Success");
+      // form.resetFields();
+    } catch (err) {
+      console.log("Failed:", err);
+      return;
+    }
+  };
 
   const onFinishFailed = (errorInfo) => {
     alert("Error")
@@ -54,7 +77,9 @@ const AddHouse = () => {
             <Button
               type="primary"
               htmlType="submit"
-              style={{ backgroundColor: "#1890ff", borderColor: "#1890ff" }}
+              style={{
+                borderColor: "#1890ff"
+              }}
             >
               Submit
             </Button>

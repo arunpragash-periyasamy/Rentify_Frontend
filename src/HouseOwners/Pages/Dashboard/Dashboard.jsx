@@ -8,7 +8,7 @@ import { Outlet } from "react-router-dom";
 const { useBreakpoint } = Grid;
 const App = () => {
   const screens = useBreakpoint();
-  const [collapsed, setCollapsed] = useState(!screens.lg);
+  const [collapsed, setCollapsed] = useState(!screens.lg); //true or false
   return (
     <Layout hasSider>
       <Sidebar collapsed={collapsed} />
