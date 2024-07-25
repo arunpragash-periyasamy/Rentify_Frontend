@@ -1,7 +1,7 @@
 const Login = () => {
     
   return (
-  <>Login Page</>
+    <div className="container h-100 d-flex justify-content-center">hello</div>
 )
 }
 

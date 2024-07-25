@@ -6,26 +6,22 @@ import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/ico
 const Cards = () => {
     return (
       <Card
-        style={{ width: 300, margin:"5px" }}
+        style={{ width: 300, margin: "5px" }}
         cover={
           <img
             alt="example"
-            src={House}
+            src={
+              "http://localhost:3000/api/house/image/images-1718372744226.jpg"
+            }
           />
         }
-        actions={[
-          <SettingOutlined key="setting" />,
-          <EditOutlined key="edit" />,
-          <EllipsisOutlined key="ellipsis" />,
-        ]}
+        // actions={[
+        //   <SettingOutlined key="setting" />,
+        //   <EditOutlined key="edit" />,
+        //   <EllipsisOutlined key="ellipsis" />,
+        // ]}
       >
-        <Meta
-          avatar={
-            <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />
-          }
-          title="Card title"
-          description="This is the description"
-        />
+        <Meta title="Card title" description="This is the description" />
       </Card>
     );
 }

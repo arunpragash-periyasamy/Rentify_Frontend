@@ -6,6 +6,9 @@ import store from './HouseOwners/utility/Store/Store';
 import router from './Routes/Router';
 import { ConfigProvider, theme } from 'antd';
 import taIN from "antd/locale/ta_IN";
+import "bootstrap/dist/css/bootstrap.css";
+
+
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
